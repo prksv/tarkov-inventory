@@ -1,0 +1,21 @@
+.root {
+  width: var(--size);
+  height: var(--size);
+  background: linear-gradient(-25deg, #3a3737 0%, #312d2d 100%);
+  outline: 1px solid rgba(103, 100, 100, 0.44);
+
+  @keyframes pulse {
+    50% {
+      opacity: 0.9;
+    }
+  }
+
+  &--active {
+    background: linear-gradient(-25deg, #4da424 0%, #33984c 100%);
+    animation: 1s ease-in-out 0s normal none infinite pulse;
+
+  }
+  &--inactive {
+    background: linear-gradient(-25deg, #e73a3a 0%, #de3e3e 100%);
+  }
+}

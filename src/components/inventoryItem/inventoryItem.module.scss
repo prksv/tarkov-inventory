@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,80);
+
+.root {
+  position: absolute;
+  z-index: 1;
+  outline: 1px solid rgba(255, 255, 255, 0.51);
+  font-family: 'Montserrat', sans-serif;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--disabled {
+    opacity: 0.5;
+    user-select: none;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &__ammo {
+    text-shadow: 0px 1px 2px rgb(0, 0, 0);
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+
+    &--now {
+      color: red;
+      font-size: 24px;
+    }
+
+    &--max {
+      color: #ffffff;
+      text-shadow: 0px 1px 2px rgb(0, 0, 0);
+    }
+  }
+
+  &__capacity {
+    text-shadow: 0px 1px 2px rgb(0, 0, 0);
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    font-size: 13px;
+    color: #ffffff;
+    text-shadow: 0px 1px 2px rgb(0, 0, 0);
+
+
+    &--now {
+
+    }
+
+    &--max {
+    }
+  }
+
+  &--title {
+    font-weight: 500;
+    color: #ffffff;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    font-size: 16px;
+    text-shadow: 0px 1px 2px rgb(0, 0, 0);
+  }
+
+  &__ghost {
+    outline: none;
+    position: absolute;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
