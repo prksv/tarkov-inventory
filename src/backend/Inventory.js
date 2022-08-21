@@ -48,11 +48,22 @@ export class Inventory {
     let newCell;
     for (let i = 0; i < item.width; i++) {
       newCell = cellID + i;
-      cells.push(newCell);
+      if (newCell % this.width === 0) {
+        canBePlaced = false;
+        break;
+      } else {
+        cells.push(newCell);
+      }
 
       for (let h = 1; h < item.height; h++) {
         newCell = cellID + i + this.width * h;
-        cells.push(newCell);
+        if (newCell % this.width === 0) {
+          canBePlaced = false;
+          break;
+        } else {
+          cells.push(newCell);
+        }
+
       }
     }
 
